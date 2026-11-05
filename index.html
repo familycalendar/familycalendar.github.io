@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FamilyCal – Shared family calendar</title>
+  <meta name="description" content="One calendar for the whole family. Choose whose appointment it is and who can see it. Kids need no account, and there are no ads.">
+  <meta property="og:title" content="FamilyCal – Shared family calendar">
+  <meta property="og:description" content="Everyone's plans in one calendar. You decide who sees what.">
+  <meta property="og:image" content="assets/icon.png">
+  <meta name="theme-color" content="#F6F8FC" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101724" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="./">
+      <img src="assets/icon.png" alt="" width="40" height="40">
+      <span>FamilyCal</span>
+    </a>
+    <nav class="top-links" aria-label="Download">
+      <a href="https://apps.apple.com/app/id6829900453">App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=tech.familycal.app">Google Play</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Everyone's plans in one calendar. You decide who sees what.</h1>
+        <p class="lead">FamilyCal is a shared calendar for parents and kids. Add the dentist, the swimming lesson and the parent-teacher meeting once, and the whole family has them on their phone.</p>
+        <div class="stores">
+          <a class="store" href="https://apps.apple.com/app/id6829900453">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg>
+            <span><small>Download on the</small>App Store</span>
+          </a>
+          <a class="store" href="https://play.google.com/store/apps/details?id=tech.familycal.app">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8 13.5 12l-9.9 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2zm11 9.1 2.7-2.8-11-6.3 8.3 9.1zm0 2.2-8.3 9.1 11-6.3-2.7-2.8zm3.9-4.2 2.9 1.7c.8.5.8 1.3 0 1.8l-2.9 1.7-3-3.1 3-3.1z"/></svg>
+            <span><small>Get it on</small>Google Play</span>
+          </a>
+        </div>
+      </div>
+
+      <figure class="demo" aria-labelledby="demo-caption">
+        <fieldset class="vis">
+          <legend>Who can see “Pick up Mark's birthday present”?</legend>
+          <label><input type="radio" name="vis" id="v-family"><span>Whole family</span></label>
+          <label><input type="radio" name="vis" id="v-only"><span>Only me</span></label>
+          <label><input type="radio" name="vis" id="v-busy" checked><span>Busy only</span></label>
+        </fieldset>
+
+        <div class="days">
+          <ol class="hours" aria-hidden="true">
+            <li style="--s:8">8</li><li style="--s:10">10</li><li style="--s:12">12</li><li style="--s:14">14</li><li style="--s:16">16</li><li style="--s:18">18</li>
+          </ol>
+          <div class="day mine">
+            <p class="who"><span class="dot" style="--c:#D66A27"></span>Sarah's phone</p>
+            <ol class="grid">
+              <li class="ev" style="--c:#00877F;--s:7.25;--e:8.25"><b>School drop-off</b><span>Leo</span></li>
+              <li class="ev" style="--c:#D66A27;--s:9.5;--e:10.5"><b>Dentist</b><span>Sarah</span></li>
+              <li class="ev gift" style="--c:#D66A27;--s:12.5;--e:13.75"><b>Pick up Mark's birthday present</b><span class="lock">Sarah</span></li>
+              <li class="ev" style="--c:#BF469A;--s:15;--e:16"><b>Swimming lesson</b><span>Mia</span></li>
+              <li class="ev" style="--c:#2673D4;--s:17;--e:18"><b>Parent-teacher meeting</b><span>Sarah, Mark</span></li>
+            </ol>
+          </div>
+          <div class="day theirs">
+            <p class="who"><span class="dot" style="--c:#2673D4"></span>Mark's phone</p>
+            <ol class="grid">
+              <li class="ev" style="--c:#00877F;--s:7.25;--e:8.25"><b>School drop-off</b><span>Leo</span></li>
+              <li class="ev" style="--c:#D66A27;--s:9.5;--e:10.5"><b>Dentist</b><span>Sarah</span></li>
+              <li class="ev gift" style="--c:#D66A27;--s:12.5;--e:13.75"><b>Pick up Mark's birthday present</b><span>Sarah</span></li>
+              <li class="ev busy" style="--s:12.5;--e:13.75"><b>Busy</b><span>Sarah</span></li>
+              <li class="ev" style="--c:#BF469A;--s:15;--e:16"><b>Swimming lesson</b><span>Mia</span></li>
+              <li class="ev" style="--c:#2673D4;--s:17;--e:18"><b>Parent-teacher meeting</b><span>Sarah, Mark</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <figcaption id="demo-caption" aria-live="polite">
+          <span class="c-family">Mark sees the present. The surprise is off.</span>
+          <span class="c-only">Mark sees nothing at lunchtime.</span>
+          <span class="c-busy">Mark sees that Sarah is busy, not why.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="row">
+      <div class="row-text">
+        <h2>Your family's day at a glance</h2>
+        <p>Today shows every plan in time order, with what's on now and what's next. Tap a name to see just one person's day, or switch to week, month and agenda.</p>
+      </div>
+      <img class="shot" src="assets/today.webp" width="600" height="1304" alt="The Today screen in FamilyCal with six plans for the family, from school drop-off to dinner at grandma's." loading="lazy">
+    </section>
+
+    <section class="row flip">
+      <div class="row-text">
+        <h2>Pick who each appointment is for</h2>
+        <p>Choose one person or several. Each family member has a color, so a glance at the calendar tells you who has to be where. Everyone gets a reminder before their own appointments, and a notification when someone adds one for them.</p>
+      </div>
+      <img class="shot" src="assets/editor.webp" width="600" height="1304" alt="Editing a parent-teacher meeting: Sarah and Mark are selected and the whole family can see it." loading="lazy">
+    </section>
+
+    <section class="row">
+      <div class="row-text">
+        <h2>Kids don't need an account</h2>
+        <p>Add your children as profiles in a few seconds. You choose which adults can see and manage each child's plans. Invite your partner by email, and you are set up.</p>
+      </div>
+      <img class="shot" src="assets/family.webp" width="600" height="1304" alt="The family screen with two adults and two child profiles." loading="lazy">
+    </section>
+
+    <section class="facts">
+      <div>
+        <h2>Works without a connection</h2>
+        <p>Plans you add on the train or in a basement are sent once you're back online. If the same appointment changed on two phones, you pick the version to keep.</p>
+      </div>
+      <div>
+        <h2>No ads, no tracking</h2>
+        <p>Your family's plans are not for sale. Export your data or delete your account at any time, right in the app.</p>
+      </div>
+      <div>
+        <h2>English, German and Turkish</h2>
+        <p>FamilyCal follows your phone's language. Spanish, French, Portuguese and Italian are coming in the next update.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© 2026 FamilyCal</p>
+    <nav aria-label="Legal">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </footer>
+</body>
+</html>
